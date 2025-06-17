@@ -1,0 +1,203 @@
+/* COLORS
+You can edit these and use them! Use css color names (e.g. "red", "purple") or hex codes (e.g. #00ff00). */
+:root {
+    --main-bg-color: white;
+    --main-fg-color: black;
+    image-rendering: pixelated;
+}
+
+/* A brief explanation of the template's layout:
+HTML - Properties here affect the entire layout.
+    BODY
+    NAV - The bar containing links to the homepage, all posts, about, etc...
+        OL - Container for an ordered list of the links.
+            LI - Container for each individual link.
+                A - A link to another page.
+    MAIN - The main view, where each post appears.
+        HEADER - Container for the title and date of each post.
+    NAV #pagination - (Only on blog posts) Container for links to the next and previous post.
+        SECTION .pageprev - A container for the previous post link.
+        SECTION .pagenext - A container for the next post link.
+    FOOTER - A container for various details.
+        P - Contains site & author details.
+        ADDRESS - Contains email details (if specified).
+        ASIDE - Contains last updated & RSS link. */
+
+html {
+    scrollbar-color: var(--main-fg-color) #00000000;
+}
+
+nav {
+    background-color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: white;
+  background-image: url(../../images/logo.gif), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAqSURBVBhXY2RgYPgPBEAKAhgZGUECUB6QjyKLBTBBabBOZADjEzCBgQEAP5EPAOx8Il0AAAAASUVORK5CYII=);
+    background-repeat: no-repeat, repeat;
+  background-position-x: right 1.5rem, left;
+  background-position-y: 1rem, top;
+  }
+
+
+
+#pagination {
+  background-image: none, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAqSURBVBhXY2RgYPgPBEAKAhgZGUECUB6QjyKLBTBBabBOZADjEzCBgQEAP5EPAOx8Il0AAAAASUVORK5CYII=);
+  background-attachment: fixed;
+}
+
+nav ol {
+  width: 90%;
+}
+
+
+
+main {
+    background-color: white;
+    color: var(--main-fg-color);
+    text-align: justify;
+    padding-bottom: 50px;
+}
+
+nav,
+main,
+footer {
+    border: 2px solid var(--main-fg-color);
+    
+}
+
+nav, main {
+
+}
+footer {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: white;
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAqSURBVBhXY2RgYPgPBEAKAhgZGUECUB6QjyKLBTBBabBOZADjEzCBgQEAP5EPAOx8Il0AAAAASUVORK5CYII=) repeat;
+background-attachment: fixed;
+}
+
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1.5rem;
+}
+
+code {
+    background-color: var(--main-highlight-color);
+    padding: 0.1rem;
+}
+
+pre:has(code) {
+    background-color: var(--main-highlight-color);
+}
+
+#pagination {
+    border-radius: 0;
+    margin-bottom: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+#pagination + footer {
+    border-radius: 1rem;
+}
+
+.lastupdate::after {
+    content: " ⚙ ";
+}
+
+::selection {
+  color: white;
+  background-color: black;
+} 
+
+::-moz-selection {
+  color: white;
+  background-color: black;
+} 
+
+body {
+  margin: 30;
+  color: Black;
+  font-family: monospace;
+  font-size: 120%;
+  background: url(data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAAGUlEQVQImWNgYGD4z4AK0Pk4Jf4zMDAwAACFvAP9WQrWlwAAAABJRU5ErkJggg==) repeat;
+  background-attachment: fixed;
+}
+
+
+h1 {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+hr {
+        width: 100%;
+        height: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAG0lEQVQImWNgYGD4j4QZsPBRBLBhnDpRFODEAM4KG+VVi8FlAAAAAElFTkSuQmCC) repeat;
+        border: none;
+      }
+
+p {
+    font-size: 1em;
+}
+
+
+blockquote {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAE0lEQVQYlWNgYGD4zzD4AL3dBABzowH/4Cwn/gAAAABJRU5ErkJggg==) repeat;
+  font-weight: bold;
+  font-style: italic;
+  text-align: justify;
+  padding: 10px;
+}
+
+p {
+  line-height: 1.6em; /*I find the default HTML line-height tends to be a bit claustrophobic for main text*/
+  
+}
+a:link { 
+    color: black;
+    font-weight: bold;
+    
+}
+
+a:visited {
+  color: black;
+}
+
+a:link:active, a:visited:active { 
+    color: black;
+}
+.scrollable {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+.fixed {
+  table-layout: fixed;
+}
+
+
+
+
+
+
+
+
+
+a:hover {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAFklEQVQImWNgYGD4z4AK0PnEA/JMAgBLRwP94stzWwAAAABJRU5ErkJggg==) repeat;
+}
+
+
+
+}
+

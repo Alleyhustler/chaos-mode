@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Unique Website</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; font-family: 'Helvetica Neue', sans-serif; background-color: #111; color: #fff; }
+    
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      border-bottom: 1px solid #444;
+    }
+    
+    header h1 {
+      font-weight: 300;
+      color: #fff;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 300;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('your-background-gif.gif') center/cover no-repeat;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 100px;
+    }
+
+    .character {
+      width: 300px;
+      height: auto;
+      z-index: 5;
+    }
+
+    .dialogue {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      background: rgba(20,20,20,0.9);
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      font-size: 18px;
+      max-width: 400px;
+      animation: fadeIn 1s ease;
+      border: 1px solid #00bcd4;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 10px 0;
+      color: #aaa;
+      font-weight: 300;
+      font-size: 14px;
+      border-top: 1px solid #444;
+    }
+
+    @keyframes changeText {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .dialogue p {
+      opacity: 0;
+      animation: changeText 12s infinite;
+      position: absolute;
+    }
+
+    .dialogue p:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .dialogue p:nth-child(2) {
+      animation-delay: 4s;
+    }
+    .dialogue p:nth-child(3) {
+      animation-delay: 8s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="#">Twitter</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img class="character" src="your-character.png" alt="Character">
+    <div class="dialogue">
+      <p>Welcome. I'm here to assist you today.</p>
+      <p>Feel free to explore and learn more about our work.</p>
+      <p>If you have questions, don't hesitate to reach out.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 My Website
+  </footer>
+</body>
+</html>
